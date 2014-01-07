@@ -95,11 +95,11 @@
 
                   Struct PersonProperty {
                      1: string id;
-                     2: PropertyValue property;    /* <--- this name 'property' is required. */
+                     2: PropertyValue property;    /* <--- this name 'property' is required. it is the subunion*/
                   }
 
                   Union DataUnit {
-                     1: PersonProperty MyProperties;
+                     1: PersonProperty property;
                      2: string Things;
                   }
 
@@ -144,15 +144,15 @@
 
                   Struct PersonProperty {
                      1: string id;
-                     2: PropertyValue property;    /* <--- this name 'property' is required. */
+                     2: PropertyValue property;    /* <--- this name 'property' is required. it is the subunion */
                   }
 
                   Union DataUnit {
-                     1: PersonProperty MyProperties;
+                     1: PersonProperty property;
                      2: string Things;
                   }
 
-                  Partitioning DataUnit will result in /MyProperties/name, /MyProperties/lastname, and /Things as the partitions."}
+                  Partitioning DataUnit will result in /property/name, /property/lastname, and /Things as the partitions."}
 
   UnionNamePropertyPartitioner
   [type]

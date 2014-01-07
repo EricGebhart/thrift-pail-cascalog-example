@@ -118,7 +118,7 @@
         (map #(thrift/value (property-union-value du :property) %)
              [:address :city :county :state :country :zip])))
 
-;(def mypail (find-or-create ( DataUnitPailStructure.) "example_output"))
+(def mypail (find-or-create ( DataUnitPailStructure.) "example_output"))
 
 ; This works too. But I think find-or-create is better.
 #_(def mypail (-> (DataUnitPailStructure.)
